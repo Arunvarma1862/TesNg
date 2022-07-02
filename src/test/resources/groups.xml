@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="demosuite">
+	<groups>
+		<run>
+			<include name="smoke" />
+		</run>
+	</groups>
+	<test name="test">
+		<classes>
+			<class name="com.groups.NewTest" />
+		</classes>
+	</test>
+	
+	<test name="test2">
+		<groups>
+			<run>
+				<include name="adhoc" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.groups.NewTest2" />
+		</classes>
+	</test>
+</suite>
