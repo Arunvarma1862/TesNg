@@ -19,7 +19,7 @@ public class TestGroupDependent {
   @Test(groups = "smoke")
   public void Test2() {
 	  System.out.println("smoke");
-	//  System.out.println(5/0);
+	  System.out.println(5/0);
   }
   @Test(groups = "sanity")
   public void Test3() {
@@ -38,7 +38,7 @@ public class TestGroupDependent {
   @Test(groups = "regression")
   public void Test6() {
 	  System.out.println("regression");
-	//  System.out.println(5/0);
+	  System.out.println(5/0);
   }
   
   

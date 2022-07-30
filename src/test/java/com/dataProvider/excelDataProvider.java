@@ -36,15 +36,15 @@ public class excelDataProvider {
 			// System.out.println( sheet.getRow(i).getCell(j).getStringCellValue());
 				
 			}
-			System.out.println();
-		
+		//	System.out.println();
+			 
 		    }
-		
 		
 		   workbook.close();
 		   fis.close();
-     
-		  return data;
+    
+		   return data;
+		  
 		  
 		   /*for (String[] dataarr : data) {
 		   System.out.println(	Arrays.toString(dataarr));

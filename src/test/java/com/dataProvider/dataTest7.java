@@ -48,6 +48,10 @@ public class dataTest7 {
        data[5][0]="Admin";
        data[5][1]="test123";
        
+       Object dat[][]= new Object[][] {{"admin","admin123"},{"admin","admin123"},{"admin","admin123"},
+    	   {"admin","admin123"},{"admin","admin123"},{"admin","admin123"},};
+    
+       
 	   return data;
    }
 }

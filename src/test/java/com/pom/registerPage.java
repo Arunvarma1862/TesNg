@@ -90,7 +90,8 @@ public class registerPage {
 	public void PostalCode(String pinn) {
 		pin.sendKeys(pinn);
 	}
-	public void con(String coun) {
+	public void con(String coun)
+	    {
 		Select sec= new Select(country); 
 		sec.selectByValue(coun);
 		}

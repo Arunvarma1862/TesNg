@@ -32,12 +32,14 @@ public class dataTest {
    @DataProvider(name="login details")
    public Object[][] loginData() {
 	   
-	   Object[][] data=new Object[2][2];
+	  /* Object[][] data=new Object[2][2];
        data[0][0]="Admin";
        data[0][1]="admin123";
        
        data[1][0]="Admin";
-       data[1][1]="test123";
+       data[1][1]="test123";*/
+	   
+	   Object[][] data= new Object[][] {{"Admin","admin123"},{"Admin","test123"}};
        
 	   return data;
    }

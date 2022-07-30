@@ -29,9 +29,11 @@ public class dataTest2 {
    }
    @DataProvider
    public Object[] loginData() {
-	   Object[] data=new Object[2];
+	  /*Object[] data=new Object[2];
         data[0]="https://opensource-demo.orangehrmlive.com/";
-        data[1]="https://opensource-demo.orangehrmlive.comm/";
+        data[1]="https://opensource-demo.orangehrmlive.comm/";*/
+        
+        Object[] data= new Object[] {"https://opensource-demo.orangehrmlive.com/","https://opensource-demo.orangehrmlive.comm/"};
 	   return data;
    }
 }

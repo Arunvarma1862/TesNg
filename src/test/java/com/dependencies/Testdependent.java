@@ -5,18 +5,18 @@ import org.testng.annotations.Test;
 
 public class Testdependent {
 	
-	static String trackNumber=null;
+	 String trackNumber=null;
 	 
 	  @Test
       public void createShipement()
 	  {
-		  System.out.println(5/0);
+		//  System.out.println(5/0);
 		  System.out.println("createShipement");
 		  trackNumber="ashjkb2356";
 	  }
 	  
 
-  @Test(dependsOnMethods = {"createShipement"},alwaysRun = true)                      //alwaysRun = true
+  @Test  (dependsOnMethods = {"createShipement"})                 //alwaysRun = true
   public void trackShipement() throws Exception                                       // ignoreMissingDependencies = true
      {
 	  if(trackNumber!=null)
@@ -29,7 +29,7 @@ public class Testdependent {
       }
   
   
-  @Test(dependsOnMethods = {"createShipement","trackShipement"},ignoreMissingDependencies = true)
+  @Test(dependsOnMethods = {"createShipement","trackShipement"})
   public void cancelShipement() throws Exception {
 	  
 	  if(trackNumber!=null) 

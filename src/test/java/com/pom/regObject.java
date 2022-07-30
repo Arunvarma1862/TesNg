@@ -9,9 +9,9 @@ import org.openqa.selenium.support.PageFactory;
 
 public class regObject {
 
-  static  WebDriver driver;
+      WebDriver driver;
    
-      regObject(WebDriver driver)
+       regObject(WebDriver driver)
       {
 	 
 	  this. driver= driver;
@@ -19,7 +19,7 @@ public class regObject {
 	  
       }
  
-     @FindBy(id="firstName") WebElement fn;
+      @FindBy(id="firstName")  WebElement fn;
      
       
       @FindBy(id="lastName")

@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.dependencies.Testdependent">
+      <class name="com.javaStreams.javaStreams">
         <methods>
-          <include name="trackShipement"/>
-          <include name="createShipement"/>
-          <include name="cancelShipement"/>
+          <include name="sorted"/>
         </methods>
-      </class> <!-- com.dependencies.Testdependent -->
+      </class> <!-- com.javaStreams.javaStreams -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

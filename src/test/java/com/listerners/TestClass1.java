@@ -25,7 +25,7 @@ public class TestClass1 {
 		assertTrue(false);
 	}
 	
-	@Test(timeOut=1000)
+	@Test(timeOut=3000)
 
 	public void TestMethod3() throws Exception {
 		Thread.sleep(2000);

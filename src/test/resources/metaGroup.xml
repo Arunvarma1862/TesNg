@@ -17,7 +17,7 @@
 
 			</define>
 			<run>
-				<include name="weeklyBuild" />
+				<include name="dailybuild" />
 
 			</run>
 		</groups>

@@ -6,13 +6,13 @@ import org.testng.annotations.Test;
 @Test
 public class NewTest {
 	
-  @Test(groups= {"smoke","sanity"})
+  @Test(groups= {"smoke","windows.sanity"})
   public void test1() {
 	  System.out.println("test1");
   }
   
   
-  @Test(groups= {"smoke","regression"})
+  @Test(groups= {"smoke","windows.regression"})
   public void test2() {
 	  System.out.println("test2");
   }

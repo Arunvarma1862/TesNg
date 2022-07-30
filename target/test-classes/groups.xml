@@ -2,7 +2,7 @@
 <suite name="demosuite">
 	<groups>
 		<run>
-			<include name="smoke" />
+			<include name="windows.*" />
 		</run>
 	</groups>
 	<test name="test">

@@ -12,6 +12,7 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class excelTest {
    @Test(dataProvider = "getData",dataProviderClass = excelDataProvider.class)
    public void Login(String username,String password) throws Exception {
+	   
 	   WebDriverManager.chromedriver().setup();
 	   WebDriver driver = new ChromeDriver();
 	   driver.manage().window().maximize();

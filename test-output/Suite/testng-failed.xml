@@ -1,6 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Test Facebook(failed)">
+    <parameter name="browserName" value="edge"/>
+    <parameter name="Author" value="virat"/>
+    <classes>
+      <class name="com.capturescreenshots.TestClass">
+        <methods>
+          <include name="teardown"/>
+          <include name="intializeExtentReport"/>
+          <include name="TestFacebook"/>
+          <include name="setup"/>
+          <include name="generateExtentReport"/>
+          <include name="checkStatus"/>
+        </methods>
+      </class> <!-- com.capturescreenshots.TestClass -->
+    </classes>
+  </test> <!-- Test Facebook(failed) -->
   <test thread-count="5" name="Test orangeHrm(failed)">
     <parameter name="browserName" value="chrome"/>
     <parameter name="Author" value="rahul"/>

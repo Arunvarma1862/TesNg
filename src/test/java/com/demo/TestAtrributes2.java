@@ -32,7 +32,7 @@ public class TestAtrributes2 {
 		   Thread.sleep(2000);
 		   WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
 		 
-	
+	      
 		   wait.until(d->d.findElement(By.xpath("//li[@data-label='name']")).isDisplayed());
 		   driver.findElement(By.xpath("//li[@data-label='name']")).click();
 		   System.out.println("username  "+driver.findElement(By.xpath("//li[@data-label='name']")).getAttribute("data-value"));
