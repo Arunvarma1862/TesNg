@@ -7,17 +7,32 @@ public class logTest {
 	
 	
 
-		private static Logger demologger=  (Logger) LogManager.getLogger(logTest.class.getName());
+		public static Logger logger=	(Logger) LogManager.getLogger(logTest.class.getName());
+	
 		
 		public static void main(String[] args) throws Exception {
 			
-	        
+			
+			
+			logger.info("hello");                
+			logger.fatal("bye");
+			logger.trace("world");
+			logger.error("mjbdj");
+			
+			
+			
+			/* Fatal-100
+			 * error-200
+			 * warn-300
+			 * info-400
+			 * debug-500
+			 * trace-600
+			 */
+			
+		
 	       
-			demologger.trace("hvwfwekjsdfk");
-			demologger.error("kbfkjfbke");
-			demologger.info("svdkjbfksd");
-			demologger.fatal("iugbakndka");
-			if(5>4)
+		
+		/*	if(5>4)
 				demologger.info("sdkfkak");
 		     	demologger.error("agfhkfakfhka");
 			

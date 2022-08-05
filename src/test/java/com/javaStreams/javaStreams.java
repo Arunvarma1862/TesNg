@@ -122,6 +122,7 @@ public class javaStreams {
 	public void streamCollect() {
 	List<String> lss=	Stream.of("Arun","Don","Virat","Kohil","Amul").filter(s->s.endsWith("l")).map(s->s.toUpperCase())
 		.collect(Collectors.toList());
+	lss.stream().forEach(s->System.out.println(s));
 	System.out.println(lss.get(1));
 	}
 	
@@ -138,6 +139,7 @@ public class javaStreams {
 		num.stream().sorted().forEach(s->System.out.println(s));
 		num.stream().sorted().distinct().forEach(s->System.out.println("unique"+s));
 	    List<Integer> value=	num.stream().distinct().sorted().collect(Collectors.toList());
+	    value.stream().forEach(s->System.out.println("j: "+s));
 	    System.out.println("third value: "+value.get(3));
 		
 		
