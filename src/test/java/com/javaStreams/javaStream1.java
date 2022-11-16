@@ -7,12 +7,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 
 
-public class javaStreams {
+public class javaStream1 {
 
 
 	// Count the number of names starting with Alphabet A in list
@@ -34,7 +33,7 @@ public class javaStreams {
 			String actual=names.get(i);
 			if(actual.startsWith("A")) 
 			{
-				count++;
+				++count;
 			}
 
 		}
@@ -52,13 +51,13 @@ public class javaStreams {
 		names.add("Adam");
 		names.add("Ram");
 
-		long cc=  names.stream().filter(s->s.startsWith("R")).count();
+	    long cc=  names.stream().filter(s->s.startsWith("R")).count();
 		System.out.println(cc);
 
 		//1.print all the names of ArrayList
 
-
-		names.stream().forEach(s->System.out.println(s));
+       names.stream().forEach(s->System.out.println(s));
+       names.stream().forEach(s->System.out.println(s));
 		names.stream().filter(s->s.length()>2).forEach(s->System.out.println("Name of charcter > 2 :"+s));
 		names.stream().filter(s->s.length()>2).limit(1).forEach(s->System.out.println("Limit :"+s));
 
@@ -75,7 +74,7 @@ public class javaStreams {
 	@Test
 	public void streamMap() {
 
-		// print names which have letter as "a " with Uppercase
+		// print names which have letter as "a " with Upper-case
 		
 		Stream.of("Arun","Don","Virat","Kohil","Amul").filter(s->s.endsWith("l")).forEach(s->System.out.println(s));
 		Stream.of("Arun","Don","Virat","Kohil","Amul").filter(s->s.endsWith("l")).map(s->s.toUpperCase()).forEach(s->System.out.println(s));
@@ -89,9 +88,9 @@ public class javaStreams {
 
 
 		// print names which have first letter as a a with uppercase and sorted
-		// terminal operation - count, limit ,sorted
+		// terminal operation - count, limit ,sorted,reduce,to Array
 
-		String  arr[]=new String[]{"Arun","Don","Virat","Kohil","Amul"};
+		String  arr[]  =new String[]{"Arun","Don","Virat","Kohil","Amul"};
 		Integer arr2[]= new Integer[] {15,25,3,4,5};
 
 		List<String> names=	Arrays.asList(arr);
@@ -108,20 +107,21 @@ public class javaStreams {
 	public void sorted() {
 
 		// Merging 2 different lists
-		List<String> names=  	Arrays.asList("Runking","Sehwag","Viru","Avun","Varun");
-        List<String> names1=	Arrays.asList("Arun","Don","Virat","Kohil","Amul");
+		List<String> names   =  	Arrays.asList("Runking","Sehwag","Viru","Avun","Varun");
+        List<String> names1  =	    Arrays.asList("Arun","Don","Virat","Kohil","Amul");
 
-		Stream<String> newStream=	Stream.concat(names.stream(), names1.stream());
+		Stream<String> newStream =	Stream.concat(names.stream(), names1.stream());
 		newStream.sorted().forEach(s->System.out.println(s));
 
 		/*boolean flag=newStream.anyMatch(s->s.equalsIgnoreCase("kohil"));
-	     System.out.println(flag);
+	      System.out.println(flag);
 	      Assert.assertTrue(flag);*/
 	}
 	@Test
 	public void streamCollect() {
+		
 	List<String> lss=	Stream.of("Arun","Don","Virat","Kohil","Amul").filter(s->s.endsWith("l")).map(s->s.toUpperCase())
-		.collect(Collectors.toList());
+		                .collect(Collectors.toList());
 	lss.stream().forEach(s->System.out.println(s));
 	System.out.println(lss.get(1));
 	}
@@ -138,6 +138,7 @@ public class javaStreams {
 		
 		num.stream().sorted().forEach(s->System.out.println(s));
 		num.stream().sorted().distinct().forEach(s->System.out.println("unique"+s));
+		
 	    List<Integer> value=	num.stream().distinct().sorted().collect(Collectors.toList());
 	    value.stream().forEach(s->System.out.println("j: "+s));
 	    System.out.println("third value: "+value.get(3));
@@ -145,6 +146,32 @@ public class javaStreams {
 		
 	
 		
+	}
+	@Test
+	public void get() {
+		
+		
+		List<Integer> dat= new ArrayList<>();
+		
+		dat.add(1);
+		dat.add(0);
+		dat.add(1);
+		dat.add(0);
+		dat.add(1);
+		dat.add(0);
+		dat.add(1);
+		dat.add(0);
+		
+	  long c=	dat.stream().filter(s->s.equals(1)).count();
+	  System.out.println(c);
+	}
+	
+	@Test
+	
+	public void ettt() {
+		
+	long cd=	Stream.of(1,0,1,1,0,1).filter(s->s.equals(1)).count();
+	System.out.println(cd);
 	}
 
 }

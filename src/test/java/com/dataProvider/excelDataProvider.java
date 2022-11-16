@@ -9,8 +9,10 @@ import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
 
 public class excelDataProvider {
+	
      @DataProvider
 	 public String[][] getData () throws Exception {
     	 
@@ -32,11 +34,8 @@ public class excelDataProvider {
 				DataFormatter df= new DataFormatter();
 			    data[i][j]=	df.formatCellValue(sheet.getRow(i+1).getCell(j));
 			
-			//  System.out.println(df.formatCellValue(sheet.getRow(i).getCell(j)));
-			// System.out.println( sheet.getRow(i).getCell(j).getStringCellValue());
-				
 			}
-		//	System.out.println();
+		
 			 
 		    }
 		

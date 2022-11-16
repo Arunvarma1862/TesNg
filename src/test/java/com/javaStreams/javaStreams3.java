@@ -14,8 +14,10 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 public class javaStreams3 {
 
 	public static void main(String[] args) {
+		
 		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
+		
 		// hello world
 
 		driver.get("https://rahulshettyacademy.com/seleniumPractise/#/offers");
@@ -23,7 +25,7 @@ public class javaStreams3 {
 		driver.findElement(By.xpath("//input[@id='search-field']")).sendKeys("Rice");
 		
 		
-	List<WebElement>items=	driver.findElements(By.xpath("//tr//td[1]"));
+	    List<WebElement> items=	driver.findElements(By.xpath("//tr//td[1]"));
 	
 	// 1 result
 	

@@ -92,9 +92,8 @@ public class orangeHRM {
 		assertTrue(element.isDisplayed());
 		assertTrue(element.getText().startsWith("Welcome"));
 		
-		
-		
-	
 	}
+
+	
 
 }

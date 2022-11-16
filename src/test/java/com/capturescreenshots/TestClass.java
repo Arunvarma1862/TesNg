@@ -6,11 +6,11 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 
 import org.testng.Assert;
-import org.testng.annotations.Parameters;
+
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.aventstack.extentreports.ExtentTest;
+
 import com.aventstack.extentreports.Status;
 import com.aventstack.extentreports.markuputils.ExtentColor;
 import com.aventstack.extentreports.markuputils.MarkupHelper;

@@ -6,7 +6,7 @@ import org.testng.annotations.Test;
 public class Testdependent {
 	
 	 String trackNumber=null;
-	 
+	@Ignore
 	  @Test
       public void createShipement()
 	  {
@@ -16,7 +16,7 @@ public class Testdependent {
 	  }
 	  
 
-  @Test  (dependsOnMethods = {"createShipement"})                 //alwaysRun = true
+  @Test  (dependsOnMethods = {"createShipement"},ignoreMissingDependencies = true)                 //alwaysRun = true
   public void trackShipement() throws Exception                                       // ignoreMissingDependencies = true
      {
 	  if(trackNumber!=null)
@@ -29,7 +29,7 @@ public class Testdependent {
       }
   
   
-  @Test(dependsOnMethods = {"createShipement","trackShipement"})
+  @Test(dependsOnMethods = {"createShipement","trackShipement"},ignoreMissingDependencies = true)
   public void cancelShipement() throws Exception {
 	  
 	  if(trackNumber!=null) 

@@ -1,0 +1,6 @@
+"10:39:42 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.level: simple
+""10:39:42 [main] DEBUG io.netty.util.ResourceLeakDetector - -Dio.netty.leakDetection.targetRecords: 4
+""10:39:43 [main] DEBUG io.netty.util.ResourceLeakDetectorFactory - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2b97cc1f
+""10:39:43 [main] DEBUG io.netty.util.internal.PlatformDependent0 - -Dio.netty.noUnsafe: false
+""10:39:43 [main] DEBUG io.netty.util.internal.PlatformDependent0 - Java version: 17
+"
